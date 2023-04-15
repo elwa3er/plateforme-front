@@ -1,0 +1,66 @@
+<!-- <mat-card>
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="email"
+          type="email"
+        />
+        <mat-error *ngIf="loginForm.get('email')!.hasError('required')"
+          >Email is required</mat-error
+        >
+        <mat-error *ngIf="loginForm.get('email')!.hasError('email')"
+          >Invalid email format</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          placeholder="Enter your password"
+          formControlName="password"
+          name="password"
+        />
+        <mat-error *ngIf="loginForm.controls['password'].hasError('required')"
+          >Password is required</mat-error
+        >
+        <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')"
+          >Password must be at least 6 characters long</mat-error
+        >
+      </mat-form-field>
+
+      <div
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        style="align-self: flex-end"
+      >
+        <button mat-button type="submit" [disabled]="!loginForm.valid">
+          Login
+        </button>
+        <a mat-button routerLink="/forgot-password">Forgot password?</a>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card> -->
+
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+   <mat-icon>menu</mat-icon>
+ </button>
+ <span>Khalil APP</span>
+ <span class="example-spacer"></span>
+ <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <mat-icon>share</mat-icon>
+</button>
+</mat-toolbar>
+<main class="content">
+  <section class="sort-area"></section>
+  <section class="card-area"></section>
+</main>
