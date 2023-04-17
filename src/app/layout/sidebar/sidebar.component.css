@@ -1,0 +1,26 @@
+/* sidebar.component.scss */
+
+mat-nav-list {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  
+    a {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      color: #666;
+      font-weight: 500;
+      text-decoration: none;
+  
+      &:hover, &.active {
+        background-color: #f2f2f2;
+        color: #333;
+      }
+  
+      mat-icon {
+        margin-right: 8px;
+        font-size: 20px;
+      }
+    }
+  }
+  

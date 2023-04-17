@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './core/auth/auth.module';
-import { SharedMaterialModule } from './shared/shared-material.module';
+import { AngularMaterialModule } from './shared/angular-material.module';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -12,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
     AuthModule,
-    SharedMaterialModule,
+    AngularMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

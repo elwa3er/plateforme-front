@@ -1,0 +1,19 @@
+/* layout.component.scss */
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  
+    .sidebar-container {
+      flex: 0 0 200px;
+      overflow-y: auto;
+      background-color: #f2f2f2;
+    }
+  
+    .content-container {
+      flex: 1 1 auto;
+      padding: 16px;
+    }
+  }
+  

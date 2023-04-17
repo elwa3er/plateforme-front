@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DocumentsGuard } from './documents.guard';
+import { CategoryGuard } from './category.guard';
 
-describe('DocumentsGuard', () => {
-  let guard: DocumentsGuard;
+describe('CategoryGuard', () => {
+  let guard: CategoryGuard;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    guard = TestBed.inject(DocumentsGuard);
+    guard = TestBed.inject(CategoryGuard);
   });
 
   it('should be created', () => {

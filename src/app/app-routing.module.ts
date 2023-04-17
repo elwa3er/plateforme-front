@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AuthModule } from './core/auth/auth.module';
 import { LoginComponent } from './core/auth/login/login.component';
+import { DocumentRoutingModule } from './feature/documents/documents-routing.module';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -12,6 +13,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./core/auth/auth.module').then((m) => m.AuthModule),
   },
+  {
+    path: 'documents',
+    loadChildren: () => import('./feature/documents/documents.module').then(m => m.DocumentsModule)
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,39 @@
+<div class="example-button-container">
+    <button mat-raised-button (click)="categoryForm.disable()">Disable form control</button>
+    <button mat-raised-button (click)="categoryForm.enable()">Enable form control</button>
+  </div>
+  
+  <mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Category Name</mat-label>
+    <input matInput formControlName="name" placeholder="Enter category name" [value]="category.name">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Alfresco ID</mat-label>
+    <input matInput formControlName="alfrescoId" placeholder="Enter Alfresco ID" [value]="category.alfrescoId">
+  </mat-form-field>
+  
+  <p>
+    <i>Enter category natures</i>
+  </p>
+  
+  <mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Category Natures</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Enter natures" [formControl]="naturesControl">
+      <mat-chip-row *ngFor="let nature of natures" (removed)="removeNature(nature)">
+        {{nature}}
+        <button matChipRemove aria-label="'remove ' + nature">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+    </mat-chip-grid>
+    <input placeholder="New nature..."
+            [matChipInputFor]="chipGrid"
+            (matChipInputTokenEnd)="add($event)"/>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+
+  <p>
+    <b>The following natures are entered:</b> {{naturesControl.value | json}}
+  </p>
+  
